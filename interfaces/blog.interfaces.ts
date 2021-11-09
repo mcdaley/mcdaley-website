@@ -2,13 +2,13 @@
 // interfaces/blog.interfaces.ts
 //-----------------------------------------------------------------------------
 
-export interface IBlogPost {
+export interface IBlogMetadata {
   id:           string,
   title:        string,
   date:         string,
 }
 
-export interface IBlogData extends IBlogPost {
+export interface IBlogPost extends IBlogMetadata {
   contentHtml:  string,
 }
 

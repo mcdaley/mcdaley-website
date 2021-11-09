@@ -10,7 +10,7 @@ import {
 
 import Layout               from '../../components/layout'
 import Date                 from '../../components/date'
-import { IBlogData }        from '../../interfaces/blog.interfaces'
+import { IBlogPost }        from '../../interfaces/blog.interfaces'
 import {
   getAllPostIds,
   getPostData,
@@ -19,7 +19,7 @@ import {
 /**
  * @function  Post
  */
-export default function Post({postData} : {postData: IBlogData}) {
+export default function Post({postData} : {postData: IBlogPost}) {
   return (
     <Layout>
       <Head>
@@ -57,7 +57,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 /**
  * @function  getStaticProps
  */
-export const getStaticProps = async ( {params} : {params: IBlogData} ) => {
+export const getStaticProps = async ( {params} : {params: IBlogPost} ) => {
   /////////////////////////////////////////////////////////////////////////////
   // TODO: 11/08/2021
   // I do not understand how the getPostData() method is returning a 

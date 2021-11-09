@@ -6,7 +6,7 @@ import path           from 'path'
 import matter         from 'gray-matter'
 import remark         from 'remark'
 import html           from 'remark-html'
-import { IBlogData } from '../interfaces/blog.interfaces'
+import { IBlogPost } from '../interfaces/blog.interfaces'
 
 // Define posts directory
 const postsDirectory = path.join(process.cwd(), 'posts')
@@ -81,7 +81,7 @@ export const getAllPostIds = () => {
  * 
  * @function  getPostData
  * @param     {string} - Name of markdown file w/o the ".md" extentsion
- * @returns   {IBlogData} 
+ * @returns   {IBlogPost} 
  */
 export const getPostData = async (id: string) => {
   const fullPath      = path.join(postsDirectory, `${id}.md`)
