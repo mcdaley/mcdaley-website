@@ -18,6 +18,7 @@ import {
 import Layout             from '../components/layout'
 import Date               from '../components/date'
 import BlogSummaryList    from '../components/blog-summary-list'
+import BlogSummary        from '../components/blog-summary'
 import styles             from '../styles/Home.module.css'
 
 /**
@@ -47,7 +48,13 @@ export default function Home({ allPostsData }: { allPostsData: IBlogMetadata[] }
         </Head>
 
         <div>
-          <BlogSummaryList allPostsData={allPostsData} />
+          <BlogSummaryList>
+            {allPostsData.map( (metadata) => {
+              return (
+                <BlogSummary key={metadata.id} metadata={metadata} />
+              )
+            })}
+          </BlogSummaryList>
         </div>
         
         <footer className={styles.footer}>

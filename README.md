@@ -5,8 +5,11 @@ Learning how to build a website using Nextjs and Tailwind CSS by recreating my w
 [x] Copy my blog posts to this project.
 [x] Add blog post summary to blog post lists.
 [x] Add blog image to the BlogPostSummary.
-[] Refactor BlogSummaryList and BlogSummary to use code format in react examples.
+[x] Refactor BlogSummaryList and BlogSummary to use code format in react examples.
 [] Add group hover for each blog post
+[] Remove "styles.container" from index.tsx
+  [] Remove all of the old "css" files
+  [] Look at layout from gatsby version of mcdaley.com
 [] Refactor the Navbar
   [] Create separate Navbar component.
   [] Fix Navbar to use the whole page and move links to the far right.
