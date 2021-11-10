@@ -4,7 +4,7 @@ Learning how to build a website using Nextjs and Tailwind CSS by recreating my w
 ## To Do
 [x] Copy my blog posts to this project.
 [x] Add blog post summary to blog post lists.
-[] Add blog image to the BlogPostSummary.
+[x] Add blog image to the BlogPostSummary.
 [] Refactor BlogSummaryList and BlogSummary to use code format in react examples.
 [] Add group hover for each blog post
 [] Refactor the Navbar
@@ -17,3 +17,7 @@ Learning how to build a website using Nextjs and Tailwind CSS by recreating my w
 [] Add the footer
 [] Add the left sidebar w/ my info on it.
 [] Add responsive behavior to website
+[] Reorganize blog posts into separate directories
+  [] Migrate each blog post to its own directory
+  [] Change logic of getStaticPaths to read directories and files
+  [] Copy images from "public" to the blog directory.
