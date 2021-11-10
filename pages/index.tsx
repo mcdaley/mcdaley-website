@@ -17,6 +17,7 @@ import {
 }                         from '../interfaces/blog.interfaces'
 import Layout             from '../components/layout'
 import Date               from '../components/date'
+import BlogSummaryList    from '../components/blog-summary-list'
 import styles             from '../styles/Home.module.css'
 
 /**
@@ -46,24 +47,9 @@ export default function Home({ allPostsData }: { allPostsData: IBlogMetadata[] }
         </Head>
 
         <div>
-          <h2>Dude, Blog Posts</h2>
-          <ul>
-            {allPostsData.map( ({id, title, date}) => {
-              return (
-                <li key={id}>
-                  <Link href={`/posts/${id}`}>
-                    <a>{title}</a>
-                  </Link>
-                  <br />
-                  <small>
-                    <Date dateString={date} />
-                  </small>
-                </li>
-              )
-            })}
-          </ul>
+          <BlogSummaryList allPostsData={allPostsData} />
         </div>
-
+        
         <footer className={styles.footer}>
           <a
             href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
