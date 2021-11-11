@@ -15,7 +15,7 @@ export default function BlogSummary({metadata} : {metadata: IBlogMetadata}) {
     <li key={metadata.id} className="group">
       <Link href={`/posts/${metadata.id}`}>
         <a>
-          <div className="flex flex-row p4 mb-5 bg-purple-200">
+          <div className="flex flex-row p4 mb-5 bg-purple-200 group-hover:bg-yellow-300">
             <div>
               <Image
                 src     = {`/${getCoverImage(metadata)}`}

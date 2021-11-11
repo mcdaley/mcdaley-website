@@ -41,7 +41,7 @@ import styles             from '../styles/Home.module.css'
 export default function Home({ allPostsData }: { allPostsData: IBlogMetadata[] }) {
   return (
     <Layout>
-      <div className={styles.container}>
+      <div className="px-4">
         <Head>
           <title>Mike Daley Website</title>
           <meta name="description" content="Home page" />
