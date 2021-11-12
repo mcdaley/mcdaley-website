@@ -28,7 +28,10 @@ export default function Post({postData} : {postData: IBlogPost}) {
 
       <h1>{postData.title}</h1>
       <Date dateString={postData.date} />
-      <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+      {/* <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} /> */}
+      <article className="prose prose-lg">
+        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+      </article>
 
       <br />
       <div>
