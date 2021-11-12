@@ -18,6 +18,9 @@ import {
   getPostData,
 }                           from '../../lib/posts'
 
+/**
+ * Define react components used in any of the blog post markdown
+ */
 const components = {
   Image
 }

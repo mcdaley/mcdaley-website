@@ -23,7 +23,13 @@ Learning how to build a website using Nextjs and Tailwind CSS by recreating my w
   [] Migrate each blog post to its own directory
   [] Change logic of getStaticPaths to read directories and files
   [] Copy images from "public" to the blog directory.
+  [] Rename files from ".md" to ".mdx"
 [] Redesign Navbar component
   [] Fix Navbar to use the whole page and move links to the far right.
   [] Replace text links w/ icons for mobile screen
   [] Style navbar links to display the active page.
+[] Code Cleanup 
+  [x] Replace function input type of <any> in Blog Summary List and 
+     replace w/ correct React type "React.ReactNode"
+  [x] Remove "contentHtml" from IBlogPost interface and require "source"
+  [] Figure out the type for "source" in IBlogPost interface.
