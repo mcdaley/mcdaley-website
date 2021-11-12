@@ -3,10 +3,12 @@
 //-----------------------------------------------------------------------------
 import Head                 from 'next/head'
 import Link                 from 'next/link'
+import Image                from 'next/image'
 import {
   GetStaticPaths,
   GetStaticProps,
 }                           from 'next'
+import { MDXRemote }        from 'next-mdx-remote'
 
 import Layout               from '../../components/layout'
 import Date                 from '../../components/date'
@@ -16,24 +18,33 @@ import {
   getPostData,
 }                           from '../../lib/posts'
 
+const components = {
+  Image
+}
+
 /**
  * @function  Post
  */
 export default function Post({postData} : {postData: IBlogPost}) {
+
   return (
     <Layout>
       <Head>
         <title>{postData.title}</title>
       </Head>
 
-      <h1>{postData.title}</h1>
-      <Date dateString={postData.date} />
-      {/* <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} /> */}
-      <article className="prose prose-lg">
-        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
-      </article>
+      <div className="p-4">
+        <div className="mb-8">
+          <h1 className="text-3xl text-gray-900 font-bold">
+            {postData.title}
+          </h1>
+          <Date dateString={postData.date} />
+        </div>
+        <article className="prose prose-lg">
+          <MDXRemote {...postData.source} components={components} />
+        </article>
+      </div>
 
-      <br />
       <div>
         <Link href="/">
           <a>← Back to home</a>

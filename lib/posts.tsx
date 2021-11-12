@@ -6,7 +6,8 @@ import path           from 'path'
 import matter         from 'gray-matter'
 import remark         from 'remark'
 import html           from 'remark-html'
-import { IBlogPost } from '../interfaces/blog.interfaces'
+import { serialize }  from 'next-mdx-remote/serialize'
+import { IBlogPost }  from '../interfaces/blog.interfaces'
 
 // Define posts directory
 const postsDirectory = path.join(process.cwd(), 'posts')
@@ -90,6 +91,13 @@ export const getPostData = async (id: string) => {
   // Use gray-matter to parse the post metadata section
   const matterResult  = matter(fileContents)
 
+  /////////////////////////////////////////////////////////////////////////////
+  // TODO: 11/11/2021
+  // Rname variables for mdx so that they make more sense.
+  /////////////////////////////////////////////////////////////////////////////
+  // Serialize for MDXProvide
+  const source   = await serialize(matterResult.content)
+
   // Use remark to convert markdown into HTML string
   const processedContent  = await remark().use(html).process(matterResult.content)
   const contentHtml       = processedContent.toString()
@@ -98,6 +106,7 @@ export const getPostData = async (id: string) => {
   const result = {
     id,
     contentHtml,
+    source,
     ...(matterResult.data as { date: string; title: string })
   }
   return result

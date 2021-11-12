@@ -7,11 +7,11 @@ description:  "Second blog post"
 excerpt:      "Can you summarize your product’s strategy in 35 words or less? If yes, can your colleagues put it the same way? Organizations fail to appreciate the necessity of having a simple, clear, succinct strategy statement that everyone can internalize and use as a guiding light for making difficult product choices."
 ---
 
-<div style="background-color:#ffffff;margin-bottom:2.00rem;">
-  <img  src     = "./complicated-chalkboard.jpg" 
-        class   = "img-fluid"
-        style   = "max-height:256px;" 
-        alt     = "Does your website need to handle 10,000 requests per minute" 
+<div className="bg-white">
+  <Image  src     = "/complicated-chalkboard.jpg" 
+          alt     = "Does your website need to handle 10,000 requests per minute" 
+          width   = {512}
+          height  = {256} 
   />
 </div>
 
@@ -32,51 +32,51 @@ We’ll calculate the market size and the number of requests per minute by:
 ### Calculate the Total Potential US Market
 If you are launching a consumer online product then a quick way to calculate the total potential market size is to break the population into equal age buckets. For example, in the US we can estimate the population is 320M people and that there are equal number of people in 20 year age group buckets. We can then estimate the percentage of each group in the bucket that would use the product to get the total market size. Below is an example determining the market size for the electric scooter rideshare business.
 
-<table  class="table table-hover">
+<table  className="table-auto">
   <thead>
-    <tr class="table-primary">
-      <th colspan="4">
-        Estimated Total Market for Electric Scooter Rentals
+    <tr className="bg-blue-200 px-8">
+      <th colSpan="4">
+        <span className="p-4">Estimated Total Market for Electric Scooter Rentals</span>
       </th>
     </tr>
     <tr>
-      <th class="text-center">&nbsp;&nbsp;Age&nbsp;&nbsp;</th>
-      <th class="text-right">People</th>
-      <th class="text-right">Percent</th>
-      <th class="text-right">Total Market</th>
+      <th className="text-center">&nbsp;&nbsp;Age&nbsp;&nbsp;</th>
+      <th className="text-right">People</th>
+      <th className="text-right">Percent</th>
+      <th className="text-right"><span className="pr-4">Total Market</span></th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td class="text-center">0-20</td>
-      <td class="text-right">80M</td>
-      <td class="text-right">0.25</td>
-      <td class="text-right">20M</td>
+    <tr className="hover px-4">
+      <td className="text-center">0-20</td>
+      <td className="text-right">80M</td>
+      <td className="text-right">0.25</td>
+      <td className="text-right"><span className="pr-4">20M</span></td>
     </tr>
     <tr>
-      <td class="text-center">21-40</td>
-      <td class="text-right">80M</td>
-      <td class="text-right">0.80</td>
-      <td class="text-right">64M</td>
+      <td className="text-center">21-40</td>
+      <td className="text-right">80M</td>
+      <td className="text-right">0.80</td>
+      <td className="text-right"><span className="pr-4">64M</span></td>
     </tr>
     <tr>
-      <td class="text-center">41-60</td>
-      <td class="text-right">80M</td>
-      <td class="text-right">0.50</td>
-      <td class="text-right">40M</td>
+      <td className="text-center">41-60</td>
+      <td className="text-right">80M</td>
+      <td className="text-right">0.50</td>
+      <td className="text-right"><span className="pr-4">40M</span></td>
     </tr>
     <tr>
-      <td class="text-center">61-80</td>
-      <td class="text-right">80M</td>
-      <td class="text-right">0.10</td>
-      <td class="text-right">8M</td>
+      <td className="text-center">61-80</td>
+      <td className="text-right">80M</td>
+      <td className="text-right">0.10</td>
+      <td className="text-right"><span className="pr-4">8M</span></td>
     </tr>
   </tbody>
   <tfoot>
-    <tr style="background-color:#CCCCCC;">
-      <td class="text-center"> Total </td>
-      <td class="text-right" colspan="3" style="font-weight:bold;">
-        132M
+    <tr className="bg-gray-300 font-bold">
+      <td className="text-center"> Total </td>
+      <td className="text-right" colSpan="3">
+        <span className="pr-4">132M</span>
       </td>
     </tr>
   </tfoot>
@@ -99,29 +99,29 @@ Not everyone will want to rent a scooter. Some of the factors that will affect u
 #### Summary of Market Share
 The following table provides a quick summary of the estimated percent of the market that we expect to capture.
 
-<table  class="table table-hover">
+<table  className="table-auto">
   <thead>
-    <tr class="table-primary">
-      <th>Factor</th>
-      <th class="text-right">Percent</th>
-      <th class="text-right">Decimal</th>
+    <tr className="bg-blue-200">
+      <th className="text-left"><span className="pl-4">Factor</span></th>
+      <th className="text-right">Percent</th>
+      <th className="text-right"><span className="pr-4"> Decimal</span></th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>People in Urban Areas</td>
-      <td class="text-right">80%</td>
-      <td class="text-right">0.80</td>
+      <td><span className="pl-4">People in Urban Areas</span></td>
+      <td className="text-right">80%</td>
+      <td className="text-right"><span className="pr-4">0.80</span></td>
     </tr>
     <tr>
-      <td>Competition</td>
-      <td class="text-right">33%</td>
-      <td class="text-right">0.33</td>
+      <td><span className="pl-4">Competition</span></td>
+      <td className="text-right">33%</td>
+      <td className="text-right"><span className="pr-4">0.33</span></td>
     </tr>
     <tr>
-      <td>People that will Rent Scooters</td>
-      <td class="text-right">5%</td>
-      <td class="text-right">0.05</td>
+      <td><span className="pl-4">People that will Rent Scooters</span></td>
+      <td className="text-right">5%</td>
+      <td className="text-right"><span className="pr-4">0.05</span></td>
     </tr>
   </tbody> 
 </table>
@@ -129,15 +129,17 @@ The following table provides a quick summary of the estimated percent of the mar
 #### Calculate the Product Market Size
 Calculate the product market size by multiplying the total potential market and the percentages of the market that we estimated in the previous sections.
 
-<table class="table table-borderless table-math">
-  <tr class="tr-math">
-    <td>=</td>
-    <td>132M people * (0.80 urban) * (0.33 market share) * (0.05 will try scooter)</td>
-  </tr>
-  <tr class="tr-math-result">
-    <td>=</td>
-    <td>1.5M is the number of people we expect to use our scooter rideshare</td>
-  </tr>
+<table className="table-auto">
+  <tbody>
+    <tr>
+      <td><span className="pl-4">=</span></td>
+      <td>132M people * (0.80 urban) * (0.33 market share) * (0.05 will try scooter)</td>
+    </tr>
+    <tr className="bg-gray-300 font-bold">
+      <td><span className="pl-4">=</span></td>
+      <td>1.5M is the number of people we expect to use our scooter rideshare</td>
+    </tr>
+  </tbody>
 </table>
 
 ### Estimate Expected Product Usage
@@ -146,15 +148,17 @@ The final step is to calculate the expected product usage so that we can calcula
 #### Average User Rental Frequency
 On average, let’s assume that a user will rent a scooter once per month and now we can calculate the number of riders per day as shown below.
 
-<table class="table table-borderless table-math">
-  <tr class="tr-math">
-    <td>=</td>
-    <td>1.5M * (1 ride/month) * (1 month/30 days)</td>
-  </tr>
-  <tr class="tr-math-result">
-    <td>=</td>
-    <td>50,000 rides per day</td>
-  </tr>
+<table className="table-auto">
+  <tbody>
+    <tr>
+      <td><span className="pl-4">=</span></td>
+      <td>1.5M * (1 ride/month) * (1 month/30 days)</td>
+    </tr>
+    <tr className="bg-gray-300 font-bold">
+      <td><span className="pl-4">=</span></td>
+      <td>50,000 rides per day</td>
+    </tr>
+  </tbody>
 </table>
 
 #### Average Server Requests per Ride
@@ -162,41 +166,43 @@ The app will need to make multiple requests to the server during each ride and w
 
 We’ll assume the average scooter ride is less than 2 miles and lasts less than 10 minutes. Also, the app will send updated coordinates of the scooter once every 30 seconds so that the server knows where the scooter is located. We can then calculate the average number of transactions per ride as shown below:
 
-<table class="table table-responsive table-borderless table-math">
-  <tr class="tr-math">
-    <td>=</td>
-    <td> (1 request at pickup) * </td>
-  </tr>
-  <tr class="tr-math">
-    <td>&nbsp;</td>
-    <td>[(1 gps request/30 seconds)*(600 sec/ride)] * </td>
-  </tr>
-  <tr class="tr-math">
-    <td>&nbsp;</td>
-    <td>(1 request at drop-off)</td>
-  </tr>
-  <tr class="tr-math-result">
-    <td>=</td>
-    <td>22 requests per ride</td>
-  </tr>
+<table className="table-auto">
+  <tbody>
+    <tr>
+      <td><span className="pl-4">=</span></td>
+      <td> 
+        <div className="flex flex-col">
+          <span className="pb-2">(1 request at pickup) * </span>
+          <span className="pb-2">[(1 gps request/30 seconds)*(600 sec/ride)] * </span>
+          <span className="pb-2">22 requests per ride</span>
+        </div>
+      </td>
+    </tr>
+    <tr className="bg-gray-300 font-bold">
+      <td><span className="pl-4">=</span></td>
+      <td>22 requests per ride</td>
+    </tr>
+  </tbody>
 </table>
 
 #### Average Transactions per Second
 We have now calculated that we’ll have 50,000 rides per day and that each ride makes 22 requests. We’ll also assume that people are only renting scooters during the day, so there will only be rentals from 8AM EST - 8PM PST or 15 hours per day. The following calculation will gives us the average number of requests per second your scooter rideshare product will need to support.
 
-<table class="table table-borderless table-math">
-  <tr class="tr-math">
-    <td>=</td>
-    <td>50,000 rides per day * (1 day/15 hours) * (22 requests/ride)</td>
-  </tr>
-  <tr class="tr-math">
-    <td>=</td>
-    <td>1,200 requests per minute * (1 hour/60 minutes)</td>
-  </tr>
-  <tr class="tr-math-result">
-    <td>=</td>
-    <td>20 requests per second</td>
-  </tr>
+<table className="table-auto">
+  <tbody>
+    <tr>
+      <td><span className="pl-4">=</span></td>
+      <td>50,000 rides per day * (1 day/15 hours) * (22 requests/ride)</td>
+    </tr>
+    <tr>
+      <td><span className="pl-4">=</span></td>
+      <td>1,200 requests per minute * (1 hour/60 minutes)</td>
+    </tr>
+    <tr className="bg-gray-300 font-bold">
+      <td><span className="pl-4">=</span></td>
+      <td>20 requests per second</td>
+    </tr>
+  </tbody>
 </table>
 
 Our market sizing exercise has calculated that your scooter rideshare company will have to handles 1,200 requests per minute or 20 requests per second. Your app needs to handle a significant amount of requests per minute, but you are nowhere close to the amount of requests handled by Twitter and Facebook.

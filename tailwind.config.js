@@ -8,7 +8,9 @@ module.exports = {
     extend: {},
   },
   variants: {
-    extend: {},
+    extend: {
+      tableLayout: ['hover'],
+    },
   },
   plugins: [
     require('@tailwindcss/typography'),

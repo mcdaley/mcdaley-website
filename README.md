@@ -18,7 +18,7 @@ Learning how to build a website using Nextjs and Tailwind CSS by recreating my w
 [] Style the home page.
 [] Add the left sidebar w/ my info on it.
 [] Add responsive behavior to website
-[] Add styling to the Blog posts
+[x] Add styling to the Blog posts
 [] Reorganize blog posts into separate directories
   [] Migrate each blog post to its own directory
   [] Change logic of getStaticPaths to read directories and files

@@ -7,11 +7,11 @@ description:  "First blog post"
 excerpt:      "Can you summarize your product’s strategy in 35 words or less? If yes, can your colleagues put it the same way? Organizations fail to appreciate the necessity of having a simple, clear, succinct strategy statement that everyone can internalize and use as a guiding light for making difficult product choices."
 ---
 
-<div style="background-color:#ffffff;margin-bottom:2.00rem;">
-  <img  src     = "./brainstorm-blocks.jpg" 
-        class   = "img-fluid"
-        style   = "max-height:256px;" 
-        alt     = "What is your product strategy" 
+<div className="bg-white">
+  <Image  src     = "/brainstorm-blocks.jpg"  
+          alt     = "What is your product strategy"
+          width   = {256}
+          height  = {256}
   />
 </div>
 
@@ -51,18 +51,16 @@ The creative part of developing a product strategy is finding the sweet spot tha
 ### Example Product Strategy Statement
 Now that we have defined the elements of a product strategy statement, we’ll create an example statement based on a fictional cloud software company called Acme-AI.  Acme-AI has a patented AI/ML algorithm for ecommerce businesses that increases customer conversion rates and sales. Our company targets consumer brands that have $5M - $100M in revenues, that do not spend heavily on technology, and that want to grow their online sales. Acme-AI generates revenue by charging customers for each client request.
 
-<div class="card" style="margin-bottom:1.0rem;background-color:#dee2e6;">
-  <div class="card-body">
-    <h5 class="card-title" style="text-decoration:underline;">
+<div className="bg-gray-100 border-1 border-gray-400 rounded-lg mb-4 p-4">
+    <h5 className="text-xl underline">
       Acme-AI Strategy Statement
     </h5>
-    <p class="card-text">
+    <p className="text-gray-800">
       To provide 1 million product recommendations per day by 2020 
       by providing our mid-sized partner consumer goods companies 
       with a cloud based patented AI/ML recommendation engine 
       optimized for their consumers.
     </p>
-  </div>
 </div>
 
 The Acme-AI strategy is to grow its business by increasing the number of daily client requests to 1 million per day as the number of client requests is directly correlated with the sales and revenues of its AI/ML product. Focusing on mid-sized consumer brands and leveraging its patented technology will allow Acme-AI to reach its objective.
@@ -70,10 +68,10 @@ The Acme-AI strategy is to grow its business by increasing the number of daily c
 ## Conclusion
 Having a clear, simple, well-structured product strategy statement allows everyone in the organization to work towards a common goal as it acts as a beacon/North Star and provides framework for prioritization of product features that drive the success of the business.
 
-</br>
-<span style="font-weight:bold;">References</span>
-</br>
-<span style="font-size:0.90rem;">
-David J. Collis and Michael G. Rukstad, “Can You Say What Your Strategy Is?”, Harvard Business Review, April 2008.
-</span>
+
+<span className="font-bold">References</span>
+
+<p className="text-sm">
+  David J. Collis and Michael G. Rukstad, “Can You Say What Your Strategy Is?”, Harvard Business Review, April 2008.
+</p>
 

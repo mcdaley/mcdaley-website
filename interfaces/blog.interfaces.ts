@@ -18,5 +18,6 @@ export interface IBlogMetadata {
  */
 export interface IBlogPost extends IBlogMetadata {
   contentHtml:  string,
+  source?:      any,
 }
 
