@@ -19,7 +19,6 @@ import Layout             from '../components/layout'
 import Date               from '../components/date'
 import BlogSummaryList    from '../components/blog-summary-list'
 import BlogSummary        from '../components/blog-summary'
-import styles             from '../styles/Home.module.css'
 
 /**
  * @function getStaticProps
@@ -56,19 +55,6 @@ export default function Home({ allPostsData }: { allPostsData: IBlogMetadata[] }
             })}
           </BlogSummaryList>
         </div>
-        
-        <footer className={styles.footer}>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Powered by{' '}
-            <span className={styles.logo}>
-              <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-            </span>
-          </a>
-        </footer>
       </div>
     </Layout>
   )

@@ -7,15 +7,13 @@ Learning how to build a website using Nextjs and Tailwind CSS by recreating my w
 [x] Add blog image to the BlogPostSummary.
 [x] Refactor BlogSummaryList and BlogSummary to use code format in react examples.
 [x] Add group hover for each blog post
-[] Redesign Navbar component
-  [] Fix Navbar to use the whole page and move links to the far right.
-  [] Replace text links w/ icons for mobile screen
-  [] Style navbar links to display the active page.
-  [] Add a logo next to the "Logo Here"
-[] Remove all of the old "css" files
+[x] Redesign Navbar component
+  [x] Fix Navbar to use the whole page and move links to the far right.
+  [x] Add a logo next to the "Logo Here"
+[x] Remove all of the old "css" files
   [x] Remove "styles.container" from index.tsx
-  [] Redesign the footer using tailwind
-  [] Look at layout from gatsby version of mcdaley.com
+  [x] Redesign the footer using tailwind
+  [x] Look at layout from gatsby version of mcdaley.com
 [x] Refactor the Navbar
   [x] Create separate Navbar component.
 [] Update the favicon.ico to use the robot
@@ -29,6 +27,8 @@ Learning how to build a website using Nextjs and Tailwind CSS by recreating my w
   [] Change logic of getStaticPaths to read directories and files
   [] Copy images from "public" to the blog directory.
   [] Rename files from ".md" to ".mdx"
+[] Enhance Navbar
+  [] Style navbar links to display the active page.
 [] Code Cleanup 
   [x] Replace function input type of <any> in Blog Summary List and 
      replace w/ correct React type "React.ReactNode"
