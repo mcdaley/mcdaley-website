@@ -19,6 +19,8 @@ import Layout             from '../components/layout'
 import Date               from '../components/date'
 import BlogSummaryList    from '../components/blog-summary-list'
 import BlogSummary        from '../components/blog-summary'
+import Sidebar            from '../components/sidebar'
+import ContactMobile      from '../components/contact-mobile'
 
 /**
  * @function getStaticProps
@@ -46,14 +48,20 @@ export default function Home({ allPostsData }: { allPostsData: IBlogMetadata[] }
           <meta name="description" content="Home page" />
         </Head>
 
-        <div>
-          <BlogSummaryList>
-            {allPostsData.map( (metadata) => {
-              return (
-                <BlogSummary key={metadata.id} metadata={metadata} />
-              )
-            })}
-          </BlogSummaryList>
+        <div className="flex flex-row my-4 divide-x-0 md:divide-x md:divide-gray-200 lg:px-16">
+          <div className="hidden md:flex md:w-1/3">
+            <Sidebar />
+          </div>
+          <div className="pl-8 flex flex-col w-full md:w-2/3">
+            <ContactMobile />
+            <BlogSummaryList>
+              {allPostsData.map( (metadata) => {
+                return (
+                  <BlogSummary key={metadata.id} metadata={metadata} />
+                )
+              })}
+            </BlogSummaryList>
+          </div>
         </div>
       </div>
     </Layout>

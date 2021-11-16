@@ -16,12 +16,17 @@ Learning how to build a website using Nextjs and Tailwind CSS by recreating my w
   [x] Look at layout from gatsby version of mcdaley.com
 [x] Refactor the Navbar
   [x] Create separate Navbar component.
-[] Update the favicon.ico to use the robot
-[] Refactor the page layout to use the Grad w/ colspans (similar to bootstrap).
-[] Style the home page.
-[] Add the left sidebar w/ my info on it.
-[] Add responsive behavior to website
+[x] Update Home Page Design
+  [x] Refactor the page layout to use the Grad w/ colspans (similar to bootstrap).
+  [x] Remove extra background colors in blog posts
+  [x] Add the left sidebar w/ my info on it.
+  [x] Hide left sidebar for mobile screens.
+  [x] Add top container on mobile
 [x] Add styling to the Blog posts
+[] About Page
+  [] Add background section
+  [] Add skills
+  [] Add personal section
 [] Reorganize blog posts into separate directories
   [] Migrate each blog post to its own directory
   [] Change logic of getStaticPaths to read directories and files
@@ -33,4 +38,10 @@ Learning how to build a website using Nextjs and Tailwind CSS by recreating my w
   [x] Replace function input type of <any> in Blog Summary List and 
      replace w/ correct React type "React.ReactNode"
   [x] Remove "contentHtml" from IBlogPost interface and require "source"
-  [] Figure out the type for "source" in IBlogPost interface.
+  [] Figure out the type for "source" in IBlogPost interface, React.ReactNode?)
+  [] Update the favicon.ico to use the robot
+  [] Fix image alignment of the Blog Summary List on the home page.
+  [] Shorten the blog excerpts.
+[] Blog Posts
+  [] Add links to previous and next blog post
+  [] Restyle the "Back Home" link
