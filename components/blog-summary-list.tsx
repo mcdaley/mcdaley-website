@@ -8,11 +8,11 @@ import React from 'react'
  */
 export default function BlogSummaryList({ children } : {children: React.ReactNode}) {
   return (
-    <>
-      <h1 className="text-2xl my-4">Dude, My Awesome Blog Posts</h1>
+    <div className="flex flex-col">
+      <h1 className="text-2xl mb-4">Dude, My Awesome Blog Posts</h1>
       <ul>
         {children}
       </ul>
-    </>
+    </div>
   )
 }

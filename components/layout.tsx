@@ -27,7 +27,7 @@ export default function Layout({ children } : {children: React.ReactNode}) {
       <Navbar /> 
         
       {/* Main Layout */}
-      <main role="main" className="w-full xl:w-3/4 py-2 px-4 md:py-4 md:px-16">
+      <main role="main" className="container mx-auto">
         {children}
 
         <Footer />
