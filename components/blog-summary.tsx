@@ -15,16 +15,17 @@ export default function BlogSummary({metadata} : {metadata: IBlogMetadata}) {
     <li key={metadata.id} className="group">
       <Link href={`/posts/${metadata.id}`}>
         <a>
-          <div className="flex flex-row p4 mb-5">
+          <div className="flex flex-row p4 mb-5 items-start">
             <div>
               <Image
-                src     = {`/${getCoverImage(metadata)}`}
-                alt     = "Blog post cover"
-                width   = {128}
-                height  = {128}
+                src       = {`/${getCoverImage(metadata)}`}
+                alt       = "Blog post cover"
+                width     = {128}
+                height    = {128}
+                className = "rounded-lg object-cover"
               />
             </div>
-            <div className="p-4 pt-2 w-full flex flex-col">
+            <div className="px-4 pb-4 w-full flex flex-col">
               <p className="text-gray-600">
                 <Date dateString={metadata.date} />
               </p>
