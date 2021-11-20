@@ -23,10 +23,11 @@ Learning how to build a website using Nextjs and Tailwind CSS by recreating my w
   [x] Hide left sidebar for mobile screens.
   [x] Add top container on mobile
 [x] Add styling to the Blog posts
-[] About Page
-  [] Add background section
-  [] Add skills
-  [] Add personal section
+[x] About Page
+  [x] Add background section
+  [x] Add skills
+  [x] Add personal section
+  [] Add LinkedIn content w/ my overview statement and then work experience
 [] Reorganize blog posts into separate directories
   [] Migrate each blog post to its own directory
   [] Change logic of getStaticPaths to read directories and files
@@ -34,6 +35,8 @@ Learning how to build a website using Nextjs and Tailwind CSS by recreating my w
   [] Rename files from ".md" to ".mdx"
 [] Enhance Navbar
   [] Style navbar links to display the active page.
+  [] Replace LOGO HERE w/ MCDALEY.COM
+  [] Pick color for navbar background
 [] Code Cleanup 
   [x] Replace function input type of <any> in Blog Summary List and 
      replace w/ correct React type "React.ReactNode"

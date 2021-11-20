@@ -12,18 +12,24 @@ export default function Jobs() {
   /**
    * List of jobs for background.
    */
-   const jobs : IJob[] = [
+  const jobs : IJob[] = [
     {
-      logo:     "/logos/careerqb-logo.png",
-      title:    "VP of Product Management",
-      company:  "CareerQB",
-      summary:  "Founder of CareerQB.com a startup that streamlines users’ job search by aggregating job search results from multiple job search sites and by providing productivity tools to help users organize their job search.",
-    },
+      logo:     "/logos/bbva-logo.svg",
+      title:    "Product Management",
+      company:  "BBVA Open Platform",
+      summary:  "Product Owner for BBVA’s Banking as a Service (BaaS) API Platform. Responsible for Account and Cards APIs used for opening and managing checking and savings accounts and for issuing and managing cards.",
+    }, 
     {
       logo:     "/logos/ews-logo.png",
-      title:    "Director Product Management",
+      title:    "Product Management",
       company:  "Zelle - Early Warning Services",
       summary:  "Early Warning Services, LLC provides mobile payment and risk solutions to financial institutions. Member of the business leadership team that launched Zelle, a P2P Payment Service that has processed more than $120B in P2P payments.",
+    },
+    {
+      logo:     "/logos/careerqb-logo.png",
+      title:    "Product Management",
+      company:  "CareerQB",
+      summary:  "Founder of CareerQB.com a startup that streamlines users’ job search by aggregating job search results from multiple job search sites and by providing productivity tools to help users organize their job search.",
     },
     {
       logo:     "/logos/thomson-reuters-logo.png",
@@ -55,11 +61,12 @@ export default function Jobs() {
                   alt       = "Company logo"
                   width     = {64}
                   height    = {64}
-                  className = "rounded-lg object-cover"
+                  className = "rounded-lg"
                 />
               </div>
               <div className="flex-col flex-grow pb-4 mb-4">
-                <h2 className="text-2xl">{job.title}</h2>
+                {/* <h2 className="text-2xl">{job.title}</h2> */}
+                <h3 className="text-lg text-gray-700">{job.company}</h3>
                 <p className="text-gray-800">{job.summary}</p>
               </div>
             </div>

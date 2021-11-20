@@ -37,8 +37,16 @@ export default function Skills() {
       image:  "/skills/html-5.svg"
     },
     {
+      title: "CSS3",
+      image: "/skills/css3.svg",
+    },
+    {
       title:  "Ruby on Rails",
       image:  "/skills/rubyonrails.svg",
+    },
+    {
+      title:  "C++",
+      image:  "/skills/cplusplus.svg"
     },
     {
       title:  "Linux",
