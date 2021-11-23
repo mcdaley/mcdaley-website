@@ -2,21 +2,17 @@
 // pages/index.tsx
 //-----------------------------------------------------------------------------
 import type { 
-  NextPage,
   GetStaticProps,
 }                         from 'next'
 import Head               from 'next/head'
-import Image              from 'next/image'
-import Link               from 'next/link'
 
 import { 
-  getSortedPostsData, 
+  getSortedPostsData,
 }                         from '../lib/posts'
 import { 
   IBlogMetadata,
 }                         from '../interfaces/blog.interfaces'
 import Layout             from '../components/layout'
-import Date               from '../components/date'
 import BlogSummaryList    from '../components/blog-summary-list'
 import BlogSummary        from '../components/blog-summary'
 import Sidebar            from '../components/sidebar'
@@ -28,6 +24,7 @@ import ContactMobile      from '../components/contact-mobile'
  */
  export const getStaticProps: GetStaticProps = async () => {
   const  allPostsData = getSortedPostsData()
+  console.log(`[debug] All Post Data: `, allPostsData)
   return {
     props: {
       allPostsData
