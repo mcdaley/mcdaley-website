@@ -25,7 +25,7 @@ const About: NextPage = () => {
       <Layout>
         <div className="px-4">
           <Head>
-            <title>AboutMike Daley</title>
+            <title>About Mike Daley</title>
             <meta name="description" content="About page" />
           </Head>
 

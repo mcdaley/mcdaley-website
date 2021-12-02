@@ -14,6 +14,7 @@ import Footer   from './footer'
  * @returns 
  */
 export default function Layout({ children } : {children: React.ReactNode}) {
+
   return (
     <div className="mx-auto">
       {/* Header Info */}

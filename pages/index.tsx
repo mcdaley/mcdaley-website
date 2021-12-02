@@ -53,7 +53,9 @@ export default function Home({ allPostsData }: { allPostsData: IBlogMetadata[] }
             <Sidebar />
           </div>
           <div className="pl-8 flex flex-col w-full md:w-2/3">
-            <ContactMobile />
+            {/* 11/23/2021 - Turned off mobile header as it looked terrible */}
+            {/* <ContactMobile /> */}
+            
             <BlogSummaryList>
               {allPostsData.map( (metadata) => {
                 return (
