@@ -12,7 +12,7 @@ import { IBlogMetadata }    from "../interfaces/blog.interfaces";
  */
 export default function BlogLink({blogMetadata, title } : {blogMetadata : IBlogMetadata, title: string}) {
   return (
-    <div className="w-1/2 pr-8 group">
+    <div className="w-full md:w-1/2 pr-8 py-2 my-2 group">
       <h3 className="text-gray-600 text-sm">
         {title}
       </h3>

@@ -37,7 +37,7 @@ export default function BlogLinkList( {blogMetadata, blogId} : {blogMetadata: IB
   const index : number = blogMetadata.findIndex(metadata => metadata.id == blogId)
 
   return (
-    <div className="inline-flex flex-row py-4 my-4">
+    <div className="inline-flex flex-row flex-wrap py-2 my-2">
       {hasPrevBlogPost(index) && <BlogLink blogMetadata={blogMetadata[index - 1]} title='Previous Post' />}
       {hasNextBlogPost(index) && <BlogLink blogMetadata={blogMetadata[index + 1]} title='Next Post' />}
     </div>
