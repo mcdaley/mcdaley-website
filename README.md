@@ -1,6 +1,9 @@
 # Migrate __mcdaley.com__ Website to Nextjs and Tailwind CSS
 Learning how to build a website using Nextjs and Tailwind CSS by recreating my website, wwww.mcdaley.com which is currently built in gatsby.
 
+## Local Storage
+
+
 ## To Do
 [x] Enhance Navbar
   [x] Style navbar links to display the active page.

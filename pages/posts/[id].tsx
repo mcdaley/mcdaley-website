@@ -1,22 +1,27 @@
 //-----------------------------------------------------------------------------
 // pages/posts/[id].ts
 //-----------------------------------------------------------------------------
-import Head                 from 'next/head'
-import Link                 from 'next/link'
-import Image                from 'next/image'
+import Head                     from 'next/head'
+import Link                     from 'next/link'
+import Image                    from 'next/image'
 import {
   GetStaticPaths,
   GetStaticProps,
-}                           from 'next'
-import { MDXRemote }        from 'next-mdx-remote'
+}                               from 'next'
+import { MDXRemote }            from 'next-mdx-remote'
+import { useEffect, useState }  from 'react'
 
-import Layout               from '../../components/layout'
-import Date                 from '../../components/date'
-import { IBlogPost }        from '../../interfaces/blog.interfaces'
+import Layout                   from '../../components/layout'
+import Date                     from '../../components/date'
+import BlogLinkList             from '../../components/blog-link-list'
+import { 
+  IBlogPost, 
+  IBlogMetadata,
+}                               from '../../interfaces/blog.interfaces'
 import {
   getAllPostIds,
   getPostData,
-}                           from '../../lib/posts'
+}                               from '../../lib/posts'
 
 /**
  * Define react components used in any of the blog post markdown
@@ -30,12 +35,28 @@ const components = {
  */
 export default function Post({postData} : {postData: IBlogPost}) {
 
+  /**
+   * Retrieve the array of blog post metadata from localStorage and save in
+   * the components state.
+   */
+  const [blogMetadata, setBlogMetadata] = useState<IBlogMetadata[] | undefined>(undefined)
+
+  useEffect( () => {
+    if (typeof window !== "undefined") {
+      const saved = localStorage.getItem("Posts");
+      const value = saved !== null ? JSON.parse(saved) : undefined;
+  
+      setBlogMetadata(value)
+    }
+  }, [postData])
+
   return (
     <Layout>
       <Head>
         <title>{postData.title}</title>
       </Head>
 
+      {/* Blog Post */}
       <div className="p-4">
         <div className="mb-8">
           <h1 className="text-3xl text-gray-900 font-bold">
@@ -48,6 +69,12 @@ export default function Post({postData} : {postData: IBlogPost}) {
         </article>
       </div>
 
+      {/* Links to previous and next blog posts */}
+      <div className="p-4">
+        {blogMetadata && <BlogLinkList blogMetadata={blogMetadata} blogId={postData.id} />}
+      </div>
+
+      {/* Link to home page */}
       <div>
         <Link href="/">
           <a>← Back to home</a>
@@ -77,10 +104,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps = async ( {params} : {params: IBlogPost} ) => {
   /////////////////////////////////////////////////////////////////////////////
   // TODO: 11/08/2021
-  // I do not understand how the getPostData() method is returning a 
-  // Promise? It doesn't return a Promise in the example code, but it only
-  // works if I add the "await"
-  //
   // Also, I could not get this to work with the ": GetStaticProps" option
   // as outlined in Nextjs documentation. I specifically set the data type
   // for the "params", which seems like the right thing to do.
