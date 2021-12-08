@@ -49,4 +49,12 @@ export default function BlogSummary({metadata} : {metadata: IBlogMetadata}) {
  */
 const getCoverImage = (metadata: IBlogMetadata) : string => {
   return metadata.cover || `record-player.jpg`
+
+  /** 
+  let source = `record-player.jpg`
+  if(metadata.cover) {
+    source = `./blog-posts/${metadata.id}/${metadata.cover}`
+  }
+  return source
+  */
 }

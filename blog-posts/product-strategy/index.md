@@ -2,13 +2,13 @@
 title:        "Can You Say What Your Product Strategy Is?"
 path:         "what-is-your-product-strategy"
 date:         "2020-02-02"
-cover:        "brainstorm-blocks.jpg"
+cover:        "blog-posts/brainstorm-blocks.jpg"
 description:  "First blog post"
 excerpt:      "Can you summarize your product’s strategy in 35 words or less? If yes, can your colleagues put it the same way? Organizations fail to appreciate the necessity of having a simple, clear, succinct strategy statement that everyone can internalize and use as a guiding light for making difficult product choices."
 ---
 
 <div className="bg-white">
-  <Image  src     = "/brainstorm-blocks.jpg"  
+  <Image  src     = "/blog-posts/brainstorm-blocks.jpg"  
           alt     = "What is your product strategy"
           width   = {256}
           height  = {256}

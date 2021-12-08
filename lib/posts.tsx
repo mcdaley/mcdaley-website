@@ -7,27 +7,28 @@ import matter         from 'gray-matter'
 import remark         from 'remark'
 import html           from 'remark-html'
 import { serialize }  from 'next-mdx-remote/serialize'
-import { IBlogPost }  from '../interfaces/blog.interfaces'
 
 // Define posts directory
-const postsDirectory = path.join(process.cwd(), 'posts')
+//* const postsDirectory = path.join(process.cwd(), 'posts')
+const postsDirectory = path.join(process.cwd(), 'blog-posts')
 
 /**
  * Reads all of the markdown files in the /posts directory and returns
- * an array of objects w/ all of the blog metadata.
+ * an array of objects w/ all of the blog metadata. The blog posts
+ * directory should have the following structure:
+ * 
+ * /posts/${blog-name}/index.md
+ *                     cover-image-1.jpg
  * 
  * @function  getSortedPostsData
  * @returns   Array of blog posts sorted by descending date.
  */
 export function getSortedPostsData() {
-  // Get the file names in /posts
-  const fileNames     = fs.readdirSync(postsDirectory)
-  const allPostsData  = fileNames.map( (fileName) => {
-    // Remove ".md" extension from file name to get the "id"
-    const id = fileName.replace(/\.md$/, '')
-
-    // Read the markdown file as a string
-    const fullPath      = path.join(postsDirectory, fileName)
+  const dirNames          = fs.readdirSync(postsDirectory)
+  
+  const allPostsData = dirNames.map( (dir) => {
+    const id            = dir
+    const fullPath      = path.join(postsDirectory, dir, 'index.md')
     const fileContents  = fs.readFileSync(fullPath, 'utf8')
 
     // Use gray-matter to parse the post metadata section
@@ -64,11 +65,11 @@ export function getSortedPostsData() {
  * @function  getAllPostIds
  */
 export const getAllPostIds = () => {
-  const fileNames = fs.readdirSync(postsDirectory)
-  const postIds   = fileNames.map(fileName => {
+  const dirNames  = fs.readdirSync(postsDirectory)
+  const postIds   = dirNames.map( (dir) => {
     return {
       params: {
-        id: fileName.replace(/\.md$/, '')
+        id: dir,
       }
     }
   })
@@ -85,7 +86,7 @@ export const getAllPostIds = () => {
  * @returns   {IBlogPost} 
  */
 export const getPostData = async (id: string) => {
-  const fullPath      = path.join(postsDirectory, `${id}.md`)
+  const fullPath      = path.join(postsDirectory, id, 'index.md')
   const fileContents  = fs.readFileSync(fullPath, 'utf8')
 
   // Use gray-matter to parse the post metadata section

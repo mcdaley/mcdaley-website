@@ -2,13 +2,13 @@
 title:        "Does your website really need to handle 10,000 requests per minute?"
 path:         "calculating-market-size"
 date:         "2020-02-17"
-cover:        "complicated-chalkboard.jpg"
+cover:        "blog-posts/complicated-chalkboard.jpg"
 description:  "Second blog post"
 excerpt:      "Can you summarize your product’s strategy in 35 words or less? If yes, can your colleagues put it the same way? Organizations fail to appreciate the necessity of having a simple, clear, succinct strategy statement that everyone can internalize and use as a guiding light for making difficult product choices."
 ---
 
 <div className="bg-white">
-  <Image  src     = "/complicated-chalkboard.jpg" 
+  <Image  src     = "/blog-posts/complicated-chalkboard.jpg" 
           alt     = "Does your website need to handle 10,000 requests per minute" 
           width   = {512}
           height  = {256} 

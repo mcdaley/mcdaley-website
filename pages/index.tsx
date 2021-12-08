@@ -2,7 +2,6 @@
 // pages/index.tsx
 //-----------------------------------------------------------------------------
 import type { 
-  NextPage,
   GetStaticProps,
 }                           from 'next'
 import Head                 from 'next/head'
@@ -30,6 +29,7 @@ import { useLocalStorage }  from '../lib/use-local-storage'
  */
  export const getStaticProps: GetStaticProps = async () => {
   const  allPostsData = getSortedPostsData()
+  //* console.log(`[debug] All Post Data: `, allPostsData)
   return {
     props: {
       allPostsData
