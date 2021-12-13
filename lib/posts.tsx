@@ -17,7 +17,7 @@ const postsDirectory = path.join(process.cwd(), 'blog-posts')
  * an array of objects w/ all of the blog metadata. The blog posts
  * directory should have the following structure:
  * 
- * /posts/${blog-name}/index.md
+ * /posts/${blog-name}/index.mdx
  *                     cover-image-1.jpg
  * 
  * @function  getSortedPostsData
@@ -28,7 +28,7 @@ export function getSortedPostsData() {
   
   const allPostsData = dirNames.map( (dir) => {
     const id            = dir
-    const fullPath      = path.join(postsDirectory, dir, 'index.md')
+    const fullPath      = path.join(postsDirectory, dir, 'index.mdx')
     const fileContents  = fs.readFileSync(fullPath, 'utf8')
 
     // Use gray-matter to parse the post metadata section
@@ -82,11 +82,11 @@ export const getAllPostIds = () => {
  * and the content of the markdown converted to a HTML string.
  * 
  * @function  getPostData
- * @param     {string} - Name of markdown file w/o the ".md" extentsion
+ * @param     {string} - Name of markdown file w/o the ".mdx" extentsion
  * @returns   {IBlogPost} 
  */
 export const getPostData = async (id: string) => {
-  const fullPath      = path.join(postsDirectory, id, 'index.md')
+  const fullPath      = path.join(postsDirectory, id, 'index.mdx')
   const fileContents  = fs.readFileSync(fullPath, 'utf8')
 
   // Use gray-matter to parse the post metadata section

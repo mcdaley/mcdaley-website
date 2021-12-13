@@ -56,29 +56,33 @@ export default function Post({postData} : {postData: IBlogPost}) {
         <title>{postData.title}</title>
       </Head>
 
-      {/* Blog Post */}
-      <div className="p-4">
-        <div className="mb-8">
-          <h1 className="text-3xl text-gray-900 font-bold">
-            {postData.title}
-          </h1>
-          <Date dateString={postData.date} />
+      <div className="flex flex-col flex-nowrap justify-center">
+        {/* Blog Post */}
+        <div className="p-4">
+          <div className="mb-8">
+            <h1 className="text-3xl text-gray-900 font-bold">
+              {postData.title}
+            </h1>
+            <Date dateString={postData.date} />
+          </div>
+          <article className="prose prose-lg">
+            <MDXRemote {...postData.source} components={components} />
+          </article>
         </div>
-        <article className="prose prose-lg">
-          <MDXRemote {...postData.source} components={components} />
-        </article>
-      </div>
 
-      {/* Links to previous and next blog posts */}
-      <div className="p-4">
-        {blogMetadata && <BlogLinkList blogMetadata={blogMetadata} blogId={postData.id} />}
-      </div>
+        {/* Links to previous and next blog posts */}
+        <div className="p-4">
+          {blogMetadata && <BlogLinkList blogMetadata={blogMetadata} blogId={postData.id} />}
+        </div>
 
-      {/* Link to home page */}
-      <div>
-        <Link href="/">
-          <a>← Back to home</a>
-        </Link>
+        {/* Link to home page */}
+        <div className='grow-0'>
+          <button className="bg-indigo-500 hover:bg-indig-800 text-white font-bold mx-4 py-2 px-4 border border-indigo-800 rounded-full">
+            <Link href="/">
+              <a>Home</a>
+            </Link>
+          </button>
+        </div>
       </div>
     </Layout>
   )

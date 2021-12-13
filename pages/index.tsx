@@ -64,10 +64,10 @@ export default function Home({ allPostsData }: { allPostsData: IBlogMetadata[] }
         </Head>
 
         <div className="flex flex-row my-4 divide-x-0 md:divide-x md:divide-gray-200 lg:px-16">
-          <div className="hidden md:flex md:w-1/3">
+          <div className="hidden md:flex md:w-1/4">
             <Sidebar />
           </div>
-          <div className="pl-8 flex flex-col w-full md:w-2/3">
+          <div className="pl-8 flex flex-col w-full md:w-3/4">
             {/* 11/23/2021 - Turned off mobile header as it looked terrible */}
             {/* <ContactMobile /> */}
             

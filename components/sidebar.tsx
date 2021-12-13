@@ -2,7 +2,8 @@
 // components/sidebar.tsx
 //-----------------------------------------------------------------------------
 import Image        from 'next/image'
-import profilePic   from '../public/Mike_1970s_cartoon_005.jpg'
+//* import profilePic   from '../public/Mike_1970s_cartoon_005.jpg'
+import profilePic   from '../public/Mike_LinkedIn.png'
 import Contact      from './contact'
 
 /**
@@ -14,7 +15,7 @@ export default function Sidebar() {
       <span className="mb-4 flex w-1/3 lg:w-1/5">
         <Image
           src       = {profilePic}
-          alt       = "My Picture"
+          alt       = "Mike Daley headshot"
           className = "rounded-full"
         />
       </span>
